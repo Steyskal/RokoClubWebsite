@@ -1,28 +1,3 @@
-<?php
-include "dbc.php";
-
-    $event_id = $_GET["num"];
-
-    $dbc = ConnectToDB();
-
-    $sql = "SELECT * FROM posts WHERE id = {$event_id}";
-    $result = $dbc->query($sql);
-
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_array()) {
-            $event = $row;
-            //echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["description"]. "<br>";
-        }
-    } else {
-        echo "0 results";
-    }
-
-    $date = date_create($event["date"]);
-
-    CloseDBC();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +5,7 @@ include "dbc.php";
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Event</title>
+        <title>Promo</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap-cyborg.css" rel="stylesheet">
@@ -55,18 +30,18 @@ include "dbc.php";
 
             <div class="col-md-8">
                 <div class="col-md-12">
-                    <img class="event-promo event-promo-main" src="img/<?php echo $event['banner']?>"> <!-- event#.png -->
+                    <h1>PROMO POSTER</h1>
                 </div>
 
                 <div class="col-md-12">
-                    <h5><?php echo $event['name']?></h5> <!-- event# name -->
-                    <p class="text-muted text-justify"><?php echo $event['description']?></p> <!-- event# description -->
-                    <h6 class="text-muted"><?php echo date_format($date,"d/m/Y")?></h6> <!-- event# date -->
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nisi urna. In ipsum nunc, porta vel ultricies non, tristique vel nisl.</h5>
+                    <p class="text-muted text-justify">Nulla facilisi. Aliquam gravida odio sed turpis fermentum, eget hendrerit magna interdum. Vestibulum imperdiet euismod scelerisque. Phasellus in dapibus metus. Proin ornare lobortis erat, tempus vulputate tortor pellentesque vel. In ac tristique mi, at viverra mauris.</p>
+                    <h6 class="text-muted">DATUM</h6>
                     <h6 class="text-muted">ROKO Club&Lounge</h6>
                 </div>
 
                 <div class="col-md-12">
-                    <a href="index.php"><h3 class="glyphicon glyphicon-menu-left">BACK</h3></a>
+                    <a href="becks.php"><h3 class="glyphicon glyphicon-menu-left">BACK</h3></a>
                 </div>
 
                 <div class="col-md-offset-3 col-md-6">

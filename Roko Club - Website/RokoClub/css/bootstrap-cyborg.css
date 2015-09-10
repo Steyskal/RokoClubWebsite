@@ -5506,13 +5506,13 @@ button.list-group-item-danger.active:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .panel-body {
-  padding: 15px;
+  /* padding: 15px; */
 }
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -5769,7 +5769,7 @@ button.list-group-item-danger.active:focus {
   border-bottom-color: #2a9fd6;
 }
 .panel-success {
-  border-color: #255625;
+  /* border-color: #255625; */
 }
 .panel-success > .panel-heading {
   color: #ffffff;
