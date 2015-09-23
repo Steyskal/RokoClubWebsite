@@ -3,7 +3,9 @@ include "dbc.php";
 
     $dbc = ConnectToDB();
 
-    $sql = "SELECT * FROM posts WHERE type = 1 ORDER BY date";
+    $today = date("Y-m-d");
+
+    $sql = "SELECT * FROM posts WHERE type = 1 AND deleted = 0 AND date > '{$today}' ORDER BY date";
     $result = $dbc->query($sql);
 
     $events = array();
@@ -59,7 +61,7 @@ include "dbc.php";
                                 <img class="event-promo event-promo-main" src="img/<?php echo $events[0]['banner']?>"> <!-- event#.png -->
                             </div>
                             <div class="panel-heading">
-                                <h3 class="panel-title">Klikni za event info!</h3>
+                                <h3 class="text-center roko-text-event panel-title">Klikni za event info!</h3>
                             </div>
                         </div>
                     </div>
@@ -72,7 +74,7 @@ include "dbc.php";
                                 <img class="event-promo event-promo-side" src="img/<?php echo $events[1]['banner']?>"> <!-- event#.png -->
                             </div>
                             <div class="panel-heading">
-                                <h3 class="panel-title">Klikni za event info!</h3>
+                                <h3 class="text-center roko-text-event panel-title">Klikni za event info!</h3>
                             </div>
                         </div>
                     </div>
@@ -85,7 +87,7 @@ include "dbc.php";
                                 <img class="event-promo event-promo-side" src="img/<?php echo $events[2]['banner']?>"> <!-- event#.png -->
                             </div>
                             <div class="panel-heading">
-                                <h3 class="panel-title">Klikni za event info!</h3>
+                                <h3 class="text-center roko-text-event panel-title">Klikni za event info!</h3>
                             </div>
                         </div>
                     </div>

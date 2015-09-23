@@ -21,6 +21,22 @@
     max-height: 125px;
 }
 
+.roko-text-event{
+    font-weight: bold;
+}
+
+.roko-table{
+    border-radius: 10px;
+}
+
+.roko-posts-divider{
+    background-color: transparent;
+}
+
+.roko-label{
+    color: #f5f5f5;
+}
+
 /* DD3D CSS */
 .dd3d-logo{
     margin: 10px;
