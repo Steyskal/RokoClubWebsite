@@ -25,28 +25,27 @@
 
         <div class="row roko-body">
             <div class="col-md-4">
-                <h1>BECKS LOGO</h1>
+                <a href="becks.php"><img class="roko-img-logos" src="img/becks_logo.png"></a>
             </div>
 
             <div class="col-md-8">
-                <div class="col-md-12">
-                    <h1>ROKO INFO</h1>
-                </div>
-
-                <div class="col-md-12">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nisi urna. In ipsum nunc, porta vel ultricies non, tristique vel nisl.</h5>
-                    <p class="text-muted text-justify">Nulla facilisi. Aliquam gravida odio sed turpis fermentum, eget hendrerit magna interdum. Vestibulum imperdiet euismod scelerisque. Phasellus in dapibus metus. Proin ornare lobortis erat, tempus vulputate tortor pellentesque vel. In ac tristique mi, at viverra mauris.</p>
-                    <h6 class="text-muted">DATUM</h6>
-                    <h6 class="text-muted">ROKO Club&Lounge</h6>
-                </div>
-
-                <div class="col-md-12">
-                    <a href="index.php"><h3 class="glyphicon glyphicon-menu-left">HOME</h3></a>
-                </div>
-
                 <div class="col-md-offset-3 col-md-6">
-                    <a href="rokoinfo.php"><h1>ROKO LOGO</h1></a>
+                    <img class="event-promo event-promo-main" src="img/Roko_Logo.png">
                 </div>
+
+                <div class="col-md-12">
+                    <div class="roko-panel panel panel-default">
+                        <div class="panel-heading"><h5>Roko Club</h5></div>
+                        <div class="roko-panel-body panel-body">
+                            <p class="text-muted text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempus consequat purus, in varius felis congue sit amet. Praesent vestibulum sollicitudin facilisis. Nunc id quam efficitur, euismod neque feugiat, pharetra ex. Nullam quis magna ut velit sollicitudin condimentum in ut arcu. Sed hendrerit sapien dui, id convallis dolor commodo ac. Donec non elementum massa, at viverra massa. Ut imperdiet ultrices tempus. In at odio eros. Proin quis justo ut nunc tincidunt placerat. Proin faucibus eros vel ex malesuada ultrices. Proin molestie, est ac tempus venenatis, libero elit facilisis purus, vel euismod diam metus in nibh. Nulla lobortis ultrices dictum. Vivamus aliquam sed ex vel laoreet. Integer non ultrices diam.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="index.php"><img class="roko-img-back" src="img/Back_button.png"></a>
+                </div>
+
             </div>
         </div>
 

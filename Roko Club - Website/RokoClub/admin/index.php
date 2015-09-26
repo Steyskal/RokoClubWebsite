@@ -145,7 +145,7 @@ include "../dbc.php";
             </div>
 
             <div class="col-md-12">
-                <a href="../index.php"><h3 class="glyphicon glyphicon-menu-left">BACK</h3></a>
+                <a href="../index.php"><img class="roko-img-back" src="../img/Back_button.png"></a>
             </div>
         </div>
 

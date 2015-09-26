@@ -5,7 +5,7 @@ include "dbc.php";
 
     $today = date("Y-m-d");
 
-    $sql = "SELECT * FROM posts WHERE type = 1 AND deleted = 0 AND date > '{$today}' ORDER BY date";
+    $sql = "SELECT * FROM posts WHERE type = 1 AND deleted = 0 AND date >= '{$today}' ORDER BY date";
     $result = $dbc->query($sql);
 
     $events = array();
@@ -50,7 +50,7 @@ include "dbc.php";
 
         <div class="row roko-body">
             <div class="col-md-4">
-                <a href="becks.php"><h1>BECKS LOGO</h1></a>
+                <a href="becks.php"><img class="roko-img-logos" src="img/becks_logo.png"></a>
             </div>
 
             <div class="col-md-8">
@@ -94,7 +94,7 @@ include "dbc.php";
                 </a>
 
                 <div class="col-md-offset-3 col-md-6">
-                    <a href="rokoinfo.php"><h1>ROKO LOGO</h1></a>
+                    <a href="rokoinfo.php"><img class="roko-img-logos" src="img/Roko_Logo.png"></a>
                 </div>
             </div>
         </div>

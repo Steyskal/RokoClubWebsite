@@ -1,3 +1,28 @@
+<?php
+include "dbc.php";
+
+$dbc = ConnectToDB();
+
+$today = date("Y-m-d");
+
+$sql = "SELECT * FROM posts WHERE type = 2 AND deleted = 0 AND date >= '{$today}' ORDER BY date";
+$result = $dbc->query($sql);
+
+$events = array();
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_array()) {
+        $events[] = $row;
+        //echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["description"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+CloseDBC();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +30,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Beck's</title>
+        <title>Roko Club</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap-cyborg.css" rel="stylesheet">
@@ -25,51 +50,51 @@
 
     <div class="row roko-body">
         <div class="col-md-4">
-            <a href="becks.php"><h1>BECKS LOGO</h1></a>
+            <a href="becks.php"><img class="roko-img-logos" src="img/becks_logo.png"></a>
         </div>
 
         <div class="col-md-8">
-            <a href="promo.php">
+            <a href="event.php?num=<?php echo $events[0]['id']?>"> <!-- event.php&num=# -->
                 <div class="col-md-12">
                     <div class="panel panel-success">
                         <div class="panel-body">
-                            PROMO 1
+                            <img class="event-promo event-promo-main" src="img/<?php echo $events[0]['banner']?>"> <!-- event#.png -->
                         </div>
                         <div class="panel-heading">
-                            <h3 class="panel-title">Klikni za info o promociji!</h3>
+                            <h3 class="text-center roko-text-event panel-title">Klikni za info o promociji!</h3>
                         </div>
                     </div>
                 </div>
             </a>
 
-            <div class="col-md-6">
-                <div class="panel panel-success">
-                    <div class="panel-body">
-                        PROMO 2
-                    </div>
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Klikni za info o promociji!</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="panel panel-success">
-                    <div class="panel-body">
-                        PROMO 3
-                    </div>
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Klikni za info o promociji!</h3>
+            <a href="event.php?num=<?php echo $events[1]['id']?>"> <!-- event.php&num=# -->
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <img class="event-promo event-promo-side" src="img/<?php echo $events[1]['banner']?>"> <!-- event#.png -->
+                        </div>
+                        <div class="panel-heading">
+                            <h3 class="text-center roko-text-event panel-title">Klikni za info o promociji!</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="col-md-12">
-                <a href="index.php"><h3 class="glyphicon glyphicon-menu-left">BACK</h3></a>
-            </div>
+            <a href="event.php?num=<?php echo $events[2]['id']?>"> <!-- event.php&num=# -->
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <img class="event-promo event-promo-side" src="img/<?php echo $events[2]['banner']?>"> <!-- event#.png -->
+                        </div>
+                        <div class="panel-heading">
+                            <h3 class="text-center roko-text-event panel-title">Klikni za info o promociji!</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
             <div class="col-md-offset-3 col-md-6">
-                <a href="rokoinfo.php"><h1>ROKO LOGO</h1></a>
+                <a href="rokoinfo.php"><img class="roko-img-logos" src="img/Roko_Logo.png"></a>
             </div>
         </div>
     </div>

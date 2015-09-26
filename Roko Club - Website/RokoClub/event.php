@@ -50,7 +50,7 @@ include "dbc.php";
 
         <div class="row roko-body">
             <div class="col-md-4">
-                <h1>BECKS LOGO</h1>
+                <a href="becks.php"><img class="roko-img-logos" src="img/becks_logo.png"></a>
             </div>
 
             <div class="col-md-8">
@@ -59,18 +59,22 @@ include "dbc.php";
                 </div>
 
                 <div class="col-md-12">
-                    <h5><?php echo $event['name']?></h5> <!-- event# name -->
-                    <p class="text-muted text-justify"><?php echo $event['description']?></p> <!-- event# description -->
-                    <h6 class="text-muted"><?php echo date_format($date,"d/m/Y")?></h6> <!-- event# date -->
-                    <h6 class="text-muted">ROKO Club&Lounge</h6>
+                    <div class="roko-panel panel panel-default">
+                        <div class="panel-heading"><h5><?php echo $event['name']?></h5> <!-- event# name --></div>
+                        <div class="roko-panel-body panel-body">
+                            <p class="text-muted text-justify"><?php echo $event['description']?></p> <!-- event# description -->
+                            <h6 class="text-muted"><?php echo date_format($date,"d/m/Y")?></h6> <!-- event# date -->
+                            <h6 class="text-muted">ROKO Club&Lounge</h6>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-12">
-                    <a href="index.php"><h3 class="glyphicon glyphicon-menu-left">BACK</h3></a>
+                <div class="col-md-3">
+                    <a href="index.php"><img class="roko-img-back" src="img/Back_button.png"></a>
                 </div>
 
-                <div class="col-md-offset-3 col-md-6">
-                    <a href="rokoinfo.php"><h1>ROKO LOGO</h1></a>
+                <div class="col-md-6">
+                    <a href="rokoinfo.php"><img class="roko-img-logos" src="img/Roko_Logo.png"></a>
                 </div>
             </div>
         </div>
