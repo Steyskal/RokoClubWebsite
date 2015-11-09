@@ -3,7 +3,7 @@
 
     $dbc = ConnectToDB();
 
-    $sql = "SELECT name FROM posts";
+    $sql = "SELECT id FROM posts";
     $result = $dbc->query($sql);
     $eventNumber = $result->num_rows + 1;
 
@@ -80,7 +80,7 @@
 
     $dbc = ConnectToDB();
 
-    $sql = "INSERT INTO posts VALUES (DEFAULT, '{$name}', '{$description}', '{$file_name}', '{$date}', {$type}, {$qr})";
+    $sql = "INSERT INTO posts VALUES (DEFAULT, '{$name}', '{$description}', '{$file_name}', '{$date}', {$type}, {$qr}, 0)";
 
     if ($dbc->query($sql) === TRUE) {
         echo "New record created successfully";

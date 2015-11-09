@@ -49,7 +49,7 @@ include "../dbc.php";
 
         <div class="container">
             <div class="row roko-body">
-                <div class="list-group">
+                <div class="col-md-offset-3 col-md-6 list-group">
 
                     <div class="list-group-item">
                         <h4 class="list-group-item-heading">Popis postojećih postova</h4>
@@ -67,7 +67,7 @@ include "../dbc.php";
                                         echo "<tr class='active'>
                                                 <td>{$event['name']}</td>
                                                 <td>{$event['date']}</td>
-                                                <td class='text-center'><div class='btn btn-danger' name='{$event['id']}'>Obriši</div></td>
+                                                <td class='text-center'><button class='delete btn btn-danger' name='{$event['id']}'>Obriši</button></td>
                                             </tr>";
                                     }
 
@@ -126,7 +126,7 @@ include "../dbc.php";
                                     <div class="col-md-9">
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="qr">
+                                                <input type="checkbox" name="qr" disabled>
                                             </label>
                                         </div>
                                     </div>
@@ -144,23 +144,20 @@ include "../dbc.php";
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <a href="../index.php"><img class="roko-img-back" src="../img/Back_button.png"></a>
-            </div>
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/admin.js"></script>
     </body>
 
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-4 col-md-4">
-                    <img class="dd3d-logo" src="../img/dd3d_logo.png">
-                    <p class="dd3d-info text-muted">info@dd3d.hr</p>
+                <div class="col-md-3">
+                    <a href="../index.php"><img class="roko-img-back" src="../img/Back_button.png"></a>
                 </div>
             </div>
         </div>

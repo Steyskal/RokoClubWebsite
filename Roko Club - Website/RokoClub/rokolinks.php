@@ -1,28 +1,3 @@
-<?php
-include "dbc.php";
-
-$event_id = $_GET["num"];
-
-$dbc = ConnectToDB();
-
-$sql = "SELECT * FROM posts WHERE id = {$event_id}";
-$result = $dbc->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_array()) {
-        $event = $row;
-        //echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["description"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-
-$date = date_create($event["date"]);
-
-CloseDBC();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +5,7 @@ CloseDBC();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Promo</title>
+        <title>Roko Club Linkovi</title>
 
         <!-- Bootstrap -->
         <link href="css/bootstrap-cyborg.css" rel="stylesheet">
@@ -55,27 +30,36 @@ CloseDBC();
         </div>
 
         <div class="col-md-offset-2 col-md-6">
-            <div class="col-md-12">
-                <img class="event-promo event-promo-main" src="img/<?php echo $event['banner']?>"> <!-- event#.png -->
-            </div>
-
-            <div class="col-md-12">
-                <div class="roko-panel panel panel-default">
-                    <div class="panel-heading"><h5><?php echo $event['name']?></h5> <!-- event# name --></div>
-                    <div class="roko-panel-body panel-body">
-                        <p class="text-muted text-justify"><?php echo $event['description']?></p> <!-- event# description -->
-                        <h6 class="text-muted"><?php echo date_format($date,"d/m/Y")?></h6> <!-- event# date -->
-                        <h6 class="text-muted">ROKO Club&Lounge</h6>
-                    </div>
-                </div>
-            </div>
-
-
             <div class="col-md-offset-3 col-md-6">
                 <a href="rokoinfo.php"><img class="roko-img-logos" src="img/Roko_Logo.png"></a>
                 <h6 class="roko-glow text-center">Klikni na logo za info!</h6>
             </div>
         </div>
+
+        <a href='rokolinksf.php?type=0'>
+            <div class='col-md-offset-1 col-md-5'>
+                <div class='panel panel-success'>
+                    <div class='panel-body'>
+                    </div>
+                    <div class='panel-heading'>
+                        <h3 class='text-center roko-text-event panel-title'>Fakulteti</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href='rokolinksf.php?type=1'>
+            <div class='col-md-offset-1 col-md-5'>
+                <div class='panel panel-success'>
+                    <div class='panel-body'>
+                    </div>
+                    <div class='panel-heading'>
+                        <h3 class='text-center roko-text-event panel-title'>Ostalo</h3>
+                    </div>
+                </div>
+            </div>
+        </a>
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

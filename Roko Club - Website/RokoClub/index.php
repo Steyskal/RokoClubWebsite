@@ -35,7 +35,6 @@ include "dbc.php";
         <!-- Bootstrap -->
         <link href="css/bootstrap-cyborg.css" rel="stylesheet">
 
-        <link href="css/sticky-footer.css" rel="stylesheet">
         <link href="css/roko-style.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -51,17 +50,18 @@ include "dbc.php";
         <div class="row roko-body">
             <div class="col-md-4">
                 <a href="becks.php"><img class="roko-img-logos" src="img/becks_logo.png"></a>
+                <h6 class="roko-glow text-center">Klikni na logo za info!</h6>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-offset-2 col-md-6">
                 <a href="event.php?num=<?php echo $events[0]['id']?>"> <!-- event.php&num=# -->
                     <div class="col-md-12">
-                        <div class="panel panel-success">
+                        <div class="panel panel-success roko-panel-succes">
                             <div class="panel-body">
                                 <img class="event-promo event-promo-main" src="img/<?php echo $events[0]['banner']?>"> <!-- event#.png -->
                             </div>
-                            <div class="panel-heading">
-                                <h3 class="text-center roko-text-event panel-title">Klikni za event info!</h3>
+                            <div class="roko-panel-heading panel-heading">
+                                <h3 class="roko-glow text-center roko-text-event panel-title">Klikni na banner za event info!</h3>
                             </div>
                         </div>
                     </div>
@@ -69,12 +69,12 @@ include "dbc.php";
 
                 <a href="event.php?num=<?php echo $events[1]['id']?>"> <!-- event.php&num=# -->
                     <div class="col-md-6">
-                        <div class="panel panel-success">
+                        <div class="panel panel-success roko-panel-succes">
                             <div class="panel-body">
                                 <img class="event-promo event-promo-side" src="img/<?php echo $events[1]['banner']?>"> <!-- event#.png -->
                             </div>
-                            <div class="panel-heading">
-                                <h3 class="text-center roko-text-event panel-title">Klikni za event info!</h3>
+                            <div class="roko-panel-heading panel-heading">
+                                <h3 class="roko-glow text-center roko-text-event panel-title">Klikni na banner za event info!</h3>
                             </div>
                         </div>
                     </div>
@@ -82,12 +82,36 @@ include "dbc.php";
 
                 <a href="event.php?num=<?php echo $events[2]['id']?>"> <!-- event.php&num=# -->
                     <div class="col-md-6">
-                        <div class="panel panel-success">
+                        <div class="panel panel-success roko-panel-succes">
                             <div class="panel-body">
                                 <img class="event-promo event-promo-side" src="img/<?php echo $events[2]['banner']?>"> <!-- event#.png -->
                             </div>
+                            <div class="roko-panel-heading panel-heading">
+                                <h3 class="roko-glow text-center roko-text-event panel-title">Klikni na banner za event info!</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="rokomenu.php">
+                    <div class="col-md-6">
+                        <div class="panel panel-success">
+                            <div class="panel-body">
+                            </div>
                             <div class="panel-heading">
-                                <h3 class="text-center roko-text-event panel-title">Klikni za event info!</h3>
+                                <h3 class="text-center roko-text-event panel-title">Cjenik - Menu</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="rokolinks.php">
+                    <div class="col-md-6">
+                        <div class="panel panel-success">
+                            <div class="panel-body">
+                            </div>
+                            <div class="panel-heading">
+                                <h3 class="text-center roko-text-event panel-title">Linkovi</h3>
                             </div>
                         </div>
                     </div>
@@ -95,6 +119,7 @@ include "dbc.php";
 
                 <div class="col-md-offset-3 col-md-6">
                     <a href="rokoinfo.php"><img class="roko-img-logos" src="img/Roko_Logo.png"></a>
+                    <h6 class="roko-glow text-center">Klikni na logo za info!</h6>
                 </div>
             </div>
         </div>
@@ -105,15 +130,15 @@ include "dbc.php";
         <script src="js/bootstrap.min.js"></script>
     </body>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-4 col-md-4">
-                    <img class="dd3d-logo" src="img/dd3d_logo.png">
+                    <img class="dd3d-logo" src="../img/dd3d_logo.png">
                     <p class="dd3d-info text-muted">info@dd3d.hr</p>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 </html>

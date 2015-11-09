@@ -1,8 +1,8 @@
 <?php
-    const servername = "localhost";
-    const username = "root";
-    const password = "";
-    const database = "roko_club";
+    $servername = "localhost";
+    $username = "grageri";
+    $password = "ilgkik##$4";
+    $database = "grageri_roko";
 
     $dbc;
 
@@ -10,7 +10,12 @@
 
         // Create connection
         global $dbc;
-        $dbc = mysqli_connect(servername, username, password, database);
+        global $servername;
+        global $username;
+        global $password;
+        global $database;
+
+        $dbc = mysqli_connect($servername, $username, $password, $database);
 
         // Check connection
         if (!$dbc) {
@@ -18,7 +23,7 @@
         }
 
         return $dbc;
-        //echo "Connected successfully";
+        // echo "Connected successfully";
     }
 
     function CloseDBC(){

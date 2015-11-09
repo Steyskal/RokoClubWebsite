@@ -3193,8 +3193,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #77b300;
-  border-color: #77b300;
+  background-color: #255625;
+  border-color: #255625;
 }
 .btn-success:focus,
 .btn-success.focus {
@@ -6368,7 +6368,7 @@ button.close {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: 0.5;
+  /*opacity: 0.5;*/
   filter: alpha(opacity=50);
   font-size: 20px;
   color: #ffffff;

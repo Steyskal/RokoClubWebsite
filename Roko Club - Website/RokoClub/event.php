@@ -51,9 +51,10 @@ include "dbc.php";
         <div class="row roko-body">
             <div class="col-md-4">
                 <a href="becks.php"><img class="roko-img-logos" src="img/becks_logo.png"></a>
+                <h6 class="roko-glow text-center">Klikni na logo za info!</h6>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-offset-2 col-md-6">
                 <div class="col-md-12">
                     <img class="event-promo event-promo-main" src="img/<?php echo $event['banner']?>"> <!-- event#.png -->
                 </div>
@@ -69,12 +70,9 @@ include "dbc.php";
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <a href="index.php"><img class="roko-img-back" src="img/Back_button.png"></a>
-                </div>
-
-                <div class="col-md-6">
+                <div class="col-md-offset-3 col-md-6">
                     <a href="rokoinfo.php"><img class="roko-img-logos" src="img/Roko_Logo.png"></a>
+                    <h6 class="roko-glow text-center">Klikni na logo za info!</h6>
                 </div>
             </div>
         </div>
@@ -88,9 +86,8 @@ include "dbc.php";
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-4 col-md-4">
-                    <img class="dd3d-logo" src="img/dd3d_logo.png">
-                    <p class="dd3d-info text-muted">info@dd3d.hr</p>
+                <div class="col-md-3">
+                    <a href="index.php"><img class="roko-img-back" src="img/Back_button.png"></a>
                 </div>
             </div>
         </div>
